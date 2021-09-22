@@ -1,5 +1,4 @@
 import styles from "../styles/GGWP.module.css";
-import Link from "next/link";
 import {useRouter} from "next/router";
 import {NextPage} from "next";
 
@@ -12,6 +11,10 @@ const GGWP: NextPage = () => {
         console.log("link copied to clipboard");
     }
 
+    const returnHome = () => {
+        router.push("/");
+    }
+
     if (!router.query) {
         return (
             <div className={styles.container}>
@@ -22,7 +25,7 @@ const GGWP: NextPage = () => {
         return (
             <div className={styles.container}>
                 <p>invalid url params</p>
-                <Link href={"/"}>Return Home</Link>
+                <button onClick={returnHome}>Return Home</button>
             </div>
         );
     }
