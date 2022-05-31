@@ -39,7 +39,7 @@ const GGWP: NextPage = () => {
                 <p>From: {from}</p>
             </div>
 
-            <button onClick={copy}>Copy</button>
+            {/*<button onClick={copy}>Copy</button>*/}
         </div>
     );
 }
