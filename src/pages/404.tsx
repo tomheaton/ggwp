@@ -1,19 +1,19 @@
 import styles from "../styles/Error.module.css";
 import {NextPage} from "next";
-import {useRouter} from "next/router";
+import Link from "next/link";
 
 const Error: NextPage = () => {
 
-    const router = useRouter();
-
-    const returnHome = () => {
-        router.push("/");
-    }
-
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>malformed link</h1>
-            <button onClick={returnHome}>Return Home</button>
+            <h1 className={styles.title}>
+                malformed link
+            </h1>
+            <Link href={"/"}>
+                <a>
+                    Return Home
+                </a>
+            </Link>
         </div>
     );
 }

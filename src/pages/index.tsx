@@ -1,13 +1,13 @@
 import styles from '../styles/Home.module.css';
-import type {NextPage} from 'next';
+import {NextPage} from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import {useState} from "react";
 import {useRouter} from "next/router";
 
-const Home: NextPage = () => {
+const Index: NextPage = () => {
 
     const router = useRouter();
+
     const [to, setTo] = useState<string>("");
     const [from, setFrom] = useState<string>("");
 
@@ -24,19 +24,27 @@ const Home: NextPage = () => {
             </Head>
 
             <main className={styles.main}>
-                <h1 className={styles.title}>ggwp</h1>
-                <p className={styles.description}>Create a simple ggwp message to share with your friends</p>
+                <h1 className={styles.title}>
+                    ggwp
+                </h1>
+                <p className={styles.description}>
+                    Create a simple ggwp message to share with your friends
+                </p>
 
                 <div className={styles.grid}>
                     <div className={styles.card}>
-                        <input type={"text"} placeholder={"to"} onChange={e => setTo(e.target.value)}/>
-                        <input type={"text"} placeholder={"from"} onChange={e => setFrom(e.target.value)}/>
-                        <button onClick={generate}>create</button>
+                        <input type={"text"} placeholder={"to"} onChange={e => setTo(e.target.value)} />
+                        <input type={"text"} placeholder={"from"} onChange={e => setFrom(e.target.value)} />
+                        <button onClick={generate}>
+                            create
+                        </button>
                     </div>
                 </div>
 
                 <div className={styles.error}>
-                    <p>please fill out all fields</p>
+                    <p>
+                        please fill out all fields
+                    </p>
                 </div>
             </main>
 
@@ -52,4 +60,4 @@ const Home: NextPage = () => {
     );
 }
 
-export default Home;
+export default Index;
